@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .booking-section {
+            max-width: 1281px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #000;
+            box-shadow: 0 4px 1px 3px rgba(125, 125, 125, 0.74);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav a {
+            color: #def2f1;
+            text-decoration: none;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        nav img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        main {
+            background-color: rgba(104, 104, 104, 0.37);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        form {
+            max-width: 568px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #def2f1;
+            background-color: transparent;
+            color: #fff;
+            border-radius: 10px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 24px;
+            background-color: #3aafa9;
+            color: #2f2f2f;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #2b7a78;
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            color: #def2f1;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .back-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin-bottom: 15px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            input[type="text"], button[type="submit"] {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-section">
+        <header>
+            <nav>
+                <a href="#bookings"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a9403ba96d59283471483831d195dbc499824cafcac0040d1cbb85ececc1cd9?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" alt="" aria-hidden="true">Bookings</a>
+                <a href="#track"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eb9a943aec1fbc70d1a2b87e2acbac198cd9772e1608b67f1e5473459d98544?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" alt="" aria-hidden="true">Track vehicle</a>
+                <a href="#manage"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/18e0e7eb934a856dd279b5be31cf7f26ab3acfcfed9e17858285030e80b1f297?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" alt="" aria-hidden="true">Manage Delivery</a>
+            </nav>
+        </header>
+        <main>
+            <a href="#" class="back-button">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/870933267563cfb517ca168b39a3dcbb9a2a3682c40e8424efeff118b59b1039?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="back-icon" alt="" />
+                <span>Back</span>
+            </a>
+            <h1>Enter Booking Details</h1>
+            <form>
+                <div class="form-group">
+                    <label for="vin-input">VIN Number</label>
+                    <input type="text" id="vin-input" placeholder="Enter VIN Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="booking-input">Booking ID</label>
+                    <input type="text" id="booking-input" placeholder="Enter Booking ID" required>
+                </div>
+                <a [routerLink]="'/tracking'"><button type="submit">Check</button></a>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Vehicle Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #def2f1;
+        }
+        .track-vehicle-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 71px 69px 45px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navigation-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid #5f6368;
+        }
+        .nav-item {
+            color: #def2f1;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .nav-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .login-container {
+            background-color: rgba(104, 104, 104, 0.37);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .back-button {
+            display: flex;
+            align-items: center;
+            color: #def2f1;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .back-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .title-container {
+            flex-grow: 1;
+        }
+        .main-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin: 5px 0 0;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #def2f1;
+            background-color: transparent;
+            color: #def2f1;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .forgot-password {
+            color: #def2f1;
+            text-decoration: none;
+            font-size: 16px;
+            align-self: flex-end;
+            margin-bottom: 20px;
+        }
+        .login-button {
+            background-color: #3aafa9;
+            color: #2f2f2f;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-button:hover {
+            background-color: #2b7a78;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #8b8b8b;
+        }
+        .divider-text {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #8b8b8b;
+        }
+        .google-signin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .google-signin:hover {
+            background-color: #f1f1f1;
+        }
+        .google-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .track-vehicle-section {
+                padding: 40px 20px;
+            }
+            .navigation-menu {
+                flex-wrap: wrap;
+            }
+            .nav-item {
+                margin-bottom: 10px;
+            }
+            .login-container {
+                padding: 20px;
+            }
+            .main-title {
+                font-size: 28px;
+            }
+            .subtitle {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="track-vehicle-section">
+        <nav class="navigation-menu">
+            <a href="#" class="nav-item">Bookings</a>
+            <a href="#" class="nav-item">Manage Delivery</a>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3ba6c64da88e0a752efe7cc84b01ffb7f25c50c61faf4ac4a20cbe66169ba28?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="nav-icon" alt="" />
+            <a href="#" class="nav-item">Track vehicle</a>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/624544a606be5dd14c67a6eb811eb36098776fea3d935db3f8ab7c1634ee2fe4?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="nav-icon" alt="" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d360cf1be7953f281c5659adeb972b934c3eb7a0516c7a5d8ae317cc56abd32e?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="nav-icon" alt="" />
+        </nav>
+        <main class="login-container">
+            <div class="header-wrapper">
+                <a href="#" class="back-button">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/870933267563cfb517ca168b39a3dcbb9a2a3682c40e8424efeff118b59b1039?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="back-icon" alt="" />
+                    <span>Back</span>
+                </a>
+                <div class="title-container">
+                    <h1 class="main-title">Track your vehicle</h1>
+                    <h2 class="subtitle">Login to your account</h2>
+                </div>
+            </div>
+            <form class="login-form">
+                <label for="email-phone" class="visually-hidden">Enter email or phone</label>
+                <input type="text" id="email-phone" class="form-input" placeholder="Enter email or phone" required aria-label="Enter email or phone">
+                <label for="password" class="visually-hidden">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="Password" required aria-label="Password">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <a [routerLink]="'/booking'">
+                    <button type="submit" class="login-button">Log In</button></a>
+            </form>
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">OR</div>
+                <div class="divider-line"></div>
+            </div>
+            <button class="google-signin">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f2489b240abe792ea2c43428fed3ec1d8a0c5ee9b59dbb289fbf13b93a135f4?placeholderIfAbsent=true&apiKey=084d0c3ceddb4dc1bb5a478bf7ea1fbb" class="google-icon" alt="Google logo">
+                <span>Sign in with Google</span>
+            </button>
+        </main>
+    </section>
+</body>
+</html>
